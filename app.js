@@ -11,10 +11,10 @@ const title = document.getElementById('title');
 const cover = document.getElementById('music-cover');
 
 // Song Titles
-const songs = ['littleidea', 'jazzyfrenchy', 'ukulele' ];
+const songs = ['Breathe', 'Do It for Me Now', 'Epic Holiday', 'Gift', 'Kiss and Tell', 'Letters to God', 'Rite of Spring', 'Shove', 'Sirens', 'Soul Survivor', 'The Flight of Apollo'];
 
 //Keep track of song
-let songIndex = 2;
+let songIndex = 0;
 
 //Load song details into Dom
 loadSong(songs[songIndex]);
@@ -22,7 +22,7 @@ loadSong(songs[songIndex]);
 //Update song details
 function loadSong(song) {
     title.innerText = song;
-    audio.src = `music/${song}.mp3`;
+    audio.src = `music/AngelsAndAirwaves/${song}.mp3`;
     cover.src = `img/${song}.jpg`;
 }
 
@@ -48,7 +48,7 @@ function pauseSong() {
 function prevSong() {
     songIndex--;
     if (songIndex < 0) {
-        songIndex = songs.length -1;
+        songIndex = songs.length - 1;
     }
     loadSong(songs[songIndex]);
 
@@ -58,7 +58,7 @@ function prevSong() {
 //Next Song
 function nextSong() {
     songIndex++;
-    if (songIndex > songs.length -1) {
+    if (songIndex > songs.length - 1) {
         songIndex = 0;
     }
     loadSong(songs[songIndex]);
@@ -68,8 +68,8 @@ function nextSong() {
 
 //Update Progress Bar
 function updateProgress(e) {
-    const {duration,currentTime} = e.srcElement;
-    const progressPercent = (currentTime/duration) * 100;
+    const { duration, currentTime } = e.srcElement;
+    const progressPercent = (currentTime / duration) * 100;
     progress.style.width = `${progressPercent}%`;
 }
 
@@ -79,7 +79,7 @@ function setProgress(e) {
     const clickX = e.offsetX;
     const duration = audio.duration;
 
-    audio.currentTime = (clickX/width) * duration;
+    audio.currentTime = (clickX / width) * duration;
 }
 
 //Event Listener
