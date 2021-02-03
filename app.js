@@ -11,7 +11,7 @@ const title = document.getElementById('title');
 const cover = document.getElementById('music-cover');
 
 // Song Titles
-const songs = ['Breathe', 'Do It for Me Now', 'Epic Holiday', 'Gift', 'Kiss and Tell', 'Letters to God', 'Rite of Spring', 'Shove', 'Sirens', 'Soul Survivor', 'The Flight of Apollo'];
+const songs = ['Breathe', 'Do It for Me Now', 'Epic Holiday', 'Gift', 'Kiss and Tell', 'Letters to God', 'Rite of Spring', 'Shove', 'Sirens', 'Soul Survivor', 'The Flight of Apollo', 'Dry Your Eyes'];
 
 //Keep track of song
 let songIndex = 0;
